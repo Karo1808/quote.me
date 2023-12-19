@@ -10,8 +10,7 @@ html {
   font-family: sans-serif;
 }
 
-body {
-  background-color: #ced4da;
+.background {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,11 +33,11 @@ body {
   color: #343a40;
 }
 
-.btn {
+.btn-quote {
   position: absolute;
   padding: 8px 4px;
   font-size: 1.6rem;
-  color: #495057;
+
   width: 50%;
   background-color: #f1f3f5;
   border: 1px solid #adb5bd;
