@@ -33,7 +33,7 @@ html {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-weight: 600;
-  height: 18rem;
+  height: 15rem;
 }
 
 .btn-quote,
@@ -130,5 +130,8 @@ html {
 @media (max-width: 800px) {
   .main {
     width: 70vw;
+  }
+  .quote {
+    font-size: 2rem;
   }
 }
