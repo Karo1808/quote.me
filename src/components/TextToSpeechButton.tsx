@@ -10,7 +10,9 @@ const TextToSpeechButton = ({
   const handleSpeak = () => {
     const synth = window.speechSynthesis;
     synth.cancel();
+
     const utterance = new SpeechSynthesisUtterance(quote);
+    utterance.lang = "en-US";
     synth.speak(utterance);
   };
   return (
