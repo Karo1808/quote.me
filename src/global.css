@@ -21,7 +21,7 @@ html {
 .main {
   background-color: #f1f3f5;
   width: 45vw;
-  height: 40vh;
+  height: min-content;
   padding: 6rem 4rem;
   border-radius: 2rem;
   box-shadow: 0 1px rgba(0, 0, 0, 0.171);
@@ -130,8 +130,14 @@ html {
 @media (max-width: 800px) {
   .main {
     width: 70vw;
+    padding: 6rem 2rem;
   }
   .quote {
     font-size: 2rem;
+    height: min-content;
+  }
+
+  .btn-container {
+    gap: 5%;
   }
 }
