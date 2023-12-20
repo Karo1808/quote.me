@@ -17,7 +17,7 @@ const App = () => {
       <div className="main">
         <div className="container">
           {isError ? (
-            <ErrorBox setIsButtonClicked={setIsButtonClicked}></ErrorBox>
+            <ErrorBox></ErrorBox>
           ) : (
             <>
               <blockquote style={{ color: color }} className="quote">

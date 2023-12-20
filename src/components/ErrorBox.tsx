@@ -1,10 +1,6 @@
-const ErrorBox = ({
-  setIsButtonClicked,
-}: {
-  setIsButtonClicked: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
+const ErrorBox = () => {
   const handleClick = () => {
-    setIsButtonClicked(true);
+    window.location.reload();
   };
   return (
     <div className="error-container">
