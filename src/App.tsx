@@ -7,6 +7,7 @@ import NewQuoteButton from "./components/NewQuoteButton";
 
 const App = () => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
+  const [isHiddenText, setIsHiddenText] = useState<boolean>(false);
   const { quote, isError, color, setIsButtonClicked } = useRandomQuote();
 
   return (
@@ -20,7 +21,10 @@ const App = () => {
             <ErrorBox></ErrorBox>
           ) : (
             <>
-              <blockquote style={{ color: color }} className="quote">
+              <blockquote
+                style={{ color: color }}
+                className={`quote ${isHiddenText ? "hidden" : ""}`}
+              >
                 &quot;{quote}&quot;
               </blockquote>
               <div className="btn-container">
@@ -32,6 +36,7 @@ const App = () => {
                 <NewQuoteButton
                   color={color}
                   setIsButtonClicked={setIsButtonClicked}
+                  setIsHiddenText={setIsHiddenText}
                 />
                 <TextToSpeechButton color={color} quote={quote} />
               </div>

@@ -1,12 +1,18 @@
 const NewQuoteButton = ({
   color,
   setIsButtonClicked,
+  setIsHiddenText,
 }: {
   color: string;
   setIsButtonClicked: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsHiddenText: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const handleClick = () => {
-    setIsButtonClicked(true);
+    setIsHiddenText(true);
+    setTimeout(() => {
+      setIsButtonClicked(true);
+      setIsHiddenText(false);
+    }, 800);
   };
   return (
     <button
