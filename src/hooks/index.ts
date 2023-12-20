@@ -32,7 +32,8 @@ const useRandomQuote = () => {
 
           setIsError(false);
           setQuote(newQuote.content);
-          setColor(COLORS[newColorIndex]); // Add this line to update the color
+          setColor(COLORS[newColorIndex]);
+          setIsButtonClicked(false);
         }
       } catch (error: unknown) {
         if (error instanceof Error) {
