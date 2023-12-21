@@ -17,7 +17,9 @@ export const COLORS = [
 ];
 
 export const STARTING_QUOTE =
-  "Quotes are the concise beauty of profound wisdom, capturing the essence of human thought in a few words";
+  "The wisdom of the wise, and the experience of ages, may be preserved by quotation";
+
+export const STARTING_AUTHOR = " Issac D’Israeli";
 
 export const MAX_QUOTE_LENGTH = 100;
 export const MIN_QUOTE_LENGTH = 30;

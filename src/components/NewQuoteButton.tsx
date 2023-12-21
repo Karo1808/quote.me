@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 const NewQuoteButton = ({
   color,
   setIsButtonClicked,
@@ -7,12 +9,19 @@ const NewQuoteButton = ({
   setIsButtonClicked: React.Dispatch<React.SetStateAction<boolean>>;
   setIsHiddenText: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
+  const timeoutRef = useRef<number | null>(null);
+
   const handleClick = () => {
-    setIsHiddenText(true);
-    setTimeout(() => {
-      setIsButtonClicked(true);
-      setIsHiddenText(false);
-    }, 800);
+    // Animation trigger functionality
+    if (timeoutRef.current === null) {
+      setIsHiddenText(true);
+
+      timeoutRef.current = setTimeout(() => {
+        setIsButtonClicked(true);
+        setIsHiddenText(false);
+        timeoutRef.current = null;
+      }, 800);
+    }
   };
   return (
     <button

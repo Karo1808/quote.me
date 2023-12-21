@@ -4,11 +4,13 @@ import {
   COLORS,
   MAX_QUOTE_LENGTH,
   MIN_QUOTE_LENGTH,
+  STARTING_AUTHOR,
   STARTING_QUOTE,
 } from "../constants";
 
 const useRandomQuote = () => {
   const [quote, setQuote] = useState<string>(STARTING_QUOTE);
+  const [author, setAuthor] = useState<string>(STARTING_AUTHOR);
   const [isButtonClicked, setIsButtonClicked] = useState<boolean>(false);
   const [color, setColor] = useState<string>(COLORS[COLORS.length - 1]);
   const [isError, setIsError] = useState<boolean>(false);
@@ -16,6 +18,7 @@ const useRandomQuote = () => {
   useEffect(() => {
     const fetchRandomQuote = async () => {
       try {
+        console.log(isButtonClicked);
         if (isButtonClicked) {
           const request = await fetch(
             `${API_URL}/quotes/random?maxLength=${MAX_QUOTE_LENGTH}&minLength=${MIN_QUOTE_LENGTH}`
@@ -32,6 +35,7 @@ const useRandomQuote = () => {
 
           setIsError(false);
           setQuote(newQuote.content);
+          setAuthor(newQuote.author);
           setColor(COLORS[newColorIndex]);
           setIsButtonClicked(false);
         }
@@ -46,7 +50,7 @@ const useRandomQuote = () => {
     fetchRandomQuote();
   }, [isButtonClicked, color]);
 
-  return { quote, isError, color, setIsButtonClicked };
+  return { quote, author, isError, color, setIsButtonClicked };
 };
 
 export default useRandomQuote;

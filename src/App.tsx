@@ -8,7 +8,8 @@ import NewQuoteButton from "./components/NewQuoteButton";
 const App = () => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const [isHiddenText, setIsHiddenText] = useState<boolean>(false);
-  const { quote, isError, color, setIsButtonClicked } = useRandomQuote();
+  const { quote, author, isError, color, setIsButtonClicked } =
+    useRandomQuote();
 
   return (
     <div
@@ -25,7 +26,8 @@ const App = () => {
                 style={{ color: color }}
                 className={`quote ${isHiddenText ? "hidden" : ""}`}
               >
-                &quot;{quote}&quot;
+                <p>&quot;{quote}&quot;</p>
+                <p className="quote-author">{` ${author} `}</p>
               </blockquote>
               <div className="btn-container">
                 <CopyButton

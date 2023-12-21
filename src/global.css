@@ -21,7 +21,7 @@ html {
 .main {
   background-color: #f1f3f5;
   width: 45vw;
-  height: min-content;
+  height: max-content;
   padding: 6rem 4rem;
   border-radius: 2rem;
   box-shadow: 0 1px rgba(0, 0, 0, 0.171);
@@ -33,13 +33,25 @@ html {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-weight: 600;
-  height: 15rem;
+  height: max-content;
   opacity: 1;
   transition: opacity 0.8s ease-in;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3rem;
 }
 
 .quote.hidden {
   opacity: 0;
+}
+
+.quote-author {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .btn-quote,
@@ -65,7 +77,7 @@ html {
 }
 
 .btn-container {
-  margin-top: 6rem;
+  margin-top: 7rem;
   display: flex;
   justify-content: center;
   gap: 10%;
@@ -140,7 +152,6 @@ html {
   }
   .quote {
     font-size: 2rem;
-    height: min-content;
   }
 
   .btn-container {
