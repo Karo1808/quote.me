@@ -1,30 +1,53 @@
-# React + TypeScript + Vite
+<div align="center">
+  <h1>quote.me</h1>  
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[English](#english) | [Polski](#polski)
 
-Currently, two official plugins are available:
+#### English
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Description
 
-## Expanding the ESLint configuration
+quote.me is a simple yet aesthetically pleasing quote generator website.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Website link:
 
-- Configure the top-level `parserOptions` property like this:
+https://quote-me-khaki.vercel.app/
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Features
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Random quotes**
+- **Clipboard functionality**
+- **Text to speech**
+- **Color changing background with animations**
+
+### Technologies used
+
+- **Vite:** A fast build tool for creating modern Single Page Applications.
+- **React:** A JavaScript library for building user interfaces.
+- **Typescript:** A superset of JavaScript that adds static typing to the language.
+- **Unsplash API SDK:** Quotable API used for fetching random quotes
+
+#### Polski
+
+### Opis
+
+quote.me to prosta, ale estetyczna strona z generatorem cytatów.
+
+### Link do strony:
+
+https://quote-me-khaki.vercel.app/
+
+### Funkcje
+
+- **Losowe cytaty**
+- **Funkcjonalność schowka**
+- **Zamiana tekstu na mowę**
+- **Zmieniające się tło z animacjami**
+
+### Użyte technologie
+
+- **Vite:** Szybkie narzędzie do budowy nowoczesnych aplikacji jednostronicowych.
+- **React:** Biblioteka JavaScript do budowania interfejsów użytkownika.
+- **Typescript:** Rozszerzenie języka JavaScript dodające typowanie statyczne.
+- **SDK Unsplash API:** Wykorzystane API Quotable do pobierania losowych cytatów.
