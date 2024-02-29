@@ -2,17 +2,15 @@
   <h1>quote.me</h1>  
 </div>
 
-[English](#english) | [Polski](#polski)
-
-#### English
+[![pl](https://img.shields.io/badge/lang-pl-red.svg)](https://github.com/Karo1808/quote.me/blob/master/README.pl.md)
 
 ### Description
 
 quote.me is a simple yet aesthetically pleasing quote generator website.
 
-### Website link:
+### Demo
 
-https://quote-me-khaki.vercel.app/
+[Website link](https://quote-me-khaki.vercel.app/)
 
 ### Features
 
@@ -26,28 +24,24 @@ https://quote-me-khaki.vercel.app/
 - **Vite:** A fast build tool for creating modern Single Page Applications.
 - **React:** A JavaScript library for building user interfaces.
 - **Typescript:** A superset of JavaScript that adds static typing to the language.
-- **Unsplash API SDK:** Quotable API used for fetching random quotes
+- **API** Quotable API used for fetching random quotes
 
-#### Polski
+### Installation
 
-### Opis
+Clone the repository locally
 
-quote.me to prosta, ale estetyczna strona z generatorem cytatów.
+```bash
+git clone https://github.com/Karo1808/infinite-gallery.git
+```
 
-### Link do strony:
+Install the required dependencies
 
-https://quote-me-khaki.vercel.app/
+```bash
+npm install
+```
 
-### Funkcje
+Run the website locally
 
-- **Losowe cytaty**
-- **Funkcjonalność schowka**
-- **Zamiana tekstu na mowę**
-- **Zmieniające się tło z animacjami**
-
-### Użyte technologie
-
-- **Vite:** Szybkie narzędzie do budowy nowoczesnych aplikacji jednostronicowych.
-- **React:** Biblioteka JavaScript do budowania interfejsów użytkownika.
-- **Typescript:** Rozszerzenie języka JavaScript dodające typowanie statyczne.
-- **SDK Unsplash API:** Wykorzystane API Quotable do pobierania losowych cytatów.
+```bash
+npm run dev
+```
