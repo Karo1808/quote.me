@@ -2,7 +2,7 @@
   <h1>quote.me</h1>  
 </div>
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Karo1808/quote.me/blob/master/README.pl.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Karo1808/quote.me/blob/master/README.md)
 
 ### Opis
 
