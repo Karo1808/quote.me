@@ -24,7 +24,7 @@ quote.me to prosta, ale estetyczna strona z generatorem cytatów.
 - **Vite:** Szybkie narzędzie do budowy nowoczesnych aplikacji jednostronicowych.
 - **React:** Biblioteka JavaScript do budowania interfejsów użytkownika.
 - **Typescript:** Rozszerzenie języka JavaScript dodające typowanie statyczne.
-- **API:** Wykorzystane API Quotable do pobierania losowych cytatów.
+- **API:** Wykorzystane API [Quoteslate](https://quoteslate.vercel.app/) do pobierania losowych cytatów.
 
 ### Instalacja
 
