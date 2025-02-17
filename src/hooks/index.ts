@@ -21,12 +21,12 @@ const useRandomQuote = () => {
         console.log(isButtonClicked);
         if (isButtonClicked) {
           const request = await fetch(
-            `${API_URL}/quotes/random?maxLength=${MAX_QUOTE_LENGTH}&minLength=${MIN_QUOTE_LENGTH}`
+            `${API_URL}api/quotes/random?minLength=${MIN_QUOTE_LENGTH}&maxLength=${MAX_QUOTE_LENGTH}`
           );
 
           if (!request.ok) throw new Error("Failed to fetch quote");
 
-          const [newQuote] = await request.json();
+          const newQuote = await request.json();
           const indexOfCurrentColor = COLORS.indexOf(color);
           const newColorIndex =
             indexOfCurrentColor + 1 === COLORS.length
@@ -34,7 +34,7 @@ const useRandomQuote = () => {
               : indexOfCurrentColor + 1;
 
           setIsError(false);
-          setQuote(newQuote.content);
+          setQuote(newQuote.quote);
           setAuthor(newQuote.author);
           setColor(COLORS[newColorIndex]);
           setIsButtonClicked(false);

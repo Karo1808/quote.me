@@ -1,4 +1,4 @@
-export const API_URL = "https://api.quotable.io";
+export const API_URL = "https://quoteslate.vercel.app/";
 
 export const COLORS = [
   "#fa5252",
