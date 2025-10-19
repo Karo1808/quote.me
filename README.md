@@ -24,7 +24,7 @@ quote.me is a simple yet aesthetically pleasing quote generator website.
 - **Vite:** A fast build tool for creating modern Single Page Applications.
 - **React:** A JavaScript library for building user interfaces.
 - **Typescript:** A superset of JavaScript that adds static typing to the language.
-- **API** Quotable API used for fetching random quotes
+- **API** [Quoteslate](https://quoteslate.vercel.app/) API used for fetching random quotes
 
 ### Installation
 
