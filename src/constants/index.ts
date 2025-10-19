@@ -1,4 +1,4 @@
-export const API_URL = "https://quoteslate.vercel.app/";
+export const API_URL = "/zen/";
 
 export const COLORS = [
   "#fa5252",

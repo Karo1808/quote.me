@@ -1,12 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  API_URL,
-  COLORS,
-  MAX_QUOTE_LENGTH,
-  MIN_QUOTE_LENGTH,
-  STARTING_AUTHOR,
-  STARTING_QUOTE,
-} from "../constants";
+import { API_URL, COLORS, STARTING_AUTHOR, STARTING_QUOTE } from "../constants";
 
 const useRandomQuote = () => {
   const [quote, setQuote] = useState<string>(STARTING_QUOTE);
@@ -20,13 +13,11 @@ const useRandomQuote = () => {
       try {
         console.log(isButtonClicked);
         if (isButtonClicked) {
-          const request = await fetch(
-            `${API_URL}api/quotes/random?minLength=${MIN_QUOTE_LENGTH}&maxLength=${MAX_QUOTE_LENGTH}`
-          );
+          const request = await fetch(`${API_URL}api/random`);
 
           if (!request.ok) throw new Error("Failed to fetch quote");
 
-          const newQuote = await request.json();
+          const [newQuote] = await request.json();
           const indexOfCurrentColor = COLORS.indexOf(color);
           const newColorIndex =
             indexOfCurrentColor + 1 === COLORS.length
@@ -34,8 +25,8 @@ const useRandomQuote = () => {
               : indexOfCurrentColor + 1;
 
           setIsError(false);
-          setQuote(newQuote.quote);
-          setAuthor(newQuote.author);
+          setQuote(newQuote.q);
+          setAuthor(newQuote.a);
           setColor(COLORS[newColorIndex]);
           setIsButtonClicked(false);
         }
