@@ -7,7 +7,7 @@ import NewQuoteButton from "./components/NewQuoteButton";
 
 const App = () => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
-  const [isHiddenText, setIsHiddenText] = useState<boolean>(false);
+  const [isTextHidden, setTextHidden] = useState<boolean>(false);
   const { quote, author, isError, color, setIsButtonClicked } =
     useRandomQuote();
 
@@ -24,7 +24,7 @@ const App = () => {
             <>
               <blockquote
                 style={{ color: color }}
-                className={`quote ${isHiddenText ? "hidden" : ""}`}
+                className={`quote ${isTextHidden ? "hidden" : ""}`}
               >
                 <p>&quot;{quote}&quot;</p>
                 <p className="quote-author">{` ${author} `}</p>
@@ -38,7 +38,7 @@ const App = () => {
                 <NewQuoteButton
                   color={color}
                   setIsButtonClicked={setIsButtonClicked}
-                  setIsHiddenText={setIsHiddenText}
+                  setIsHiddenText={setTextHidden}
                 />
                 <TextToSpeechButton color={color} quote={quote} />
               </div>

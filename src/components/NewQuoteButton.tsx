@@ -9,17 +9,16 @@ const NewQuoteButton = ({
   setIsButtonClicked: React.Dispatch<React.SetStateAction<boolean>>;
   setIsHiddenText: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
-  const timeoutRef = useRef<number | null>(null);
+  const animationTimeoutRef = useRef<number | null>(null);
 
   const handleClick = () => {
-    // Animation trigger functionality
-    if (timeoutRef.current === null) {
+    if (animationTimeoutRef.current === null) {
       setIsHiddenText(true);
 
-      timeoutRef.current = setTimeout(() => {
+      animationTimeoutRef.current = setTimeout(() => {
         setIsButtonClicked(true);
         setIsHiddenText(false);
-        timeoutRef.current = null;
+        animationTimeoutRef.current = null;
       }, 800);
     }
   };
